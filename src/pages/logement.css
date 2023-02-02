@@ -1,0 +1,44 @@
+aside{
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+}
+
+
+
+.rentalIdentity{
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+    color: #ff6060;
+}
+
+.rentalTitle{
+    font-size: 36px;
+    margin: 0px;
+}
+
+.rentalPlace{
+    font-size: 18px;
+    margin: 0px;
+}
+
+.tagWrapper{
+    display: flex;
+}
+
+.host{
+    display: flex;
+}
+
+.renterPicture{
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    margin-left: 10px;
+}
+
+.renterName{
+    width: 70px;
+    text-align: right;
+}

@@ -1,0 +1,22 @@
+.error-page{
+    color: #FF6060;
+}
+
+.error-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 288px;
+    margin-top: 169px;
+}
+
+.error-section p{
+    margin-top: 66px;
+    margin-bottom: 182px;
+}

@@ -1,0 +1,37 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+    height: 68px;
+    color: #FF6060;
+    margin-top: 40px;
+}
+
+ul{
+    display: flex;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 24px;
+}
+
+a{
+    text-decoration: none;
+    color: #FF6060;
+}
+
+li{
+    list-style: none;
+}
+
+.accueil{
+    border-bottom: 2px solid #FF6060;
+}
+
+.apropos{
+    margin-left: 57px;
+}
+
+.aproposActive{
+    margin-left: 57px;
+    border-bottom: 2px solid #FF6060;
+}
