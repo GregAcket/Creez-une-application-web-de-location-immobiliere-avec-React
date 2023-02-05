@@ -9,8 +9,11 @@
     align-items: center;
 }
 
+.error-link{
+    text-decoration-line: underline;
+}
+
 .error {
-    font-family: 'Montserrat';
     font-weight: 700;
     font-size: 288px;
     margin-top: 169px;

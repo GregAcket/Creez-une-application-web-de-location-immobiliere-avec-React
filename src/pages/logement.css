@@ -1,16 +1,22 @@
 aside{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 76px;
     justify-content: space-between;
-    width: 1240px;
+    width: 100%;
 }
-
-
 
 .rentalIdentity{
     display: flex;
     justify-content: space-between;
-    width: 1240px;
+    width: 100%;
     color: #ff6060;
+}
+
+.place{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .rentalTitle{
@@ -29,6 +35,7 @@ aside{
 
 .host{
     display: flex;
+    justify-content: flex-end;
 }
 
 .renterPicture{

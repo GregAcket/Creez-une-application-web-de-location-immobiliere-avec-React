@@ -15,7 +15,7 @@ function Dropdown (props) {
                     <button onClick={() => setOpen(false)}><img className="up" src={arrow} alt="logo flèche" ></img></button>
                 </div>
                 <div className="text">
-                    <p>{props.text}</p>
+                    {typeof props.content === "object" ? <ul>{props.content}</ul> : <p>{props.content}</p>}
                 </div>
             </article>
         </>

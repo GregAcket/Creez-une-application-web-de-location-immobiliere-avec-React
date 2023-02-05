@@ -16,8 +16,8 @@ function About() {
         </div>
           
 
-        {dropdownjson.map((truc, index) => (
-          <Dropdown key={`${truc}-${index}`} name={truc.name} text={truc.text}></Dropdown>
+        {dropdownjson.map((objet, index) => (
+          <Dropdown key={`${objet}-${index}`} name={objet.name} content={objet.text}></Dropdown>
         ))}
     </>
   )

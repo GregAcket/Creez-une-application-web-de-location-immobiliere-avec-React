@@ -1,0 +1,7 @@
+.rating{
+    align-self: flex-end;
+    width: 30px;
+    height: 30px;
+    margin-top: 24px;
+    margin-left: 10px;
+}

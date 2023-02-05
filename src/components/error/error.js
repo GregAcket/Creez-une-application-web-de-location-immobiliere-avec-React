@@ -9,7 +9,7 @@ function Error() {
             <section className='error-section'>
                 <img className = 'error' src={logo} alt="Logo 404"></img>
                 <p>Oups! La page que vous demandez n'existe pas.</p>
-                <Link to= {`/`}>Retourner sur la page d'accueil</Link>
+                <Link to= {`/`} className ='error-link' >Retourner sur la page d'accueil</Link>
             </section>
         </div>
     </>)

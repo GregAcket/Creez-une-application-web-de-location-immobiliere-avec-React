@@ -7,7 +7,7 @@ function Thumb() {
     return(
 <>
     {logementJson.map((rental) => (
-        <Link to={`/Logement/${rental.id}`}  key={rental.id}>
+        <Link to={`/Logement/${rental.id}`}  key={rental.id} className='rentalLink'>
             <article className="homepageArticle">
                 <img className="rentalImg" src={rental.cover} alt={rental.title}></img>
                 <span className="rentalName"> {rental.title}</span>

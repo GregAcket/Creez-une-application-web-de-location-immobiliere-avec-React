@@ -1,8 +1,9 @@
 import { Outlet, useParams } from "react-router-dom";
 import Carroussel from "../components/carroussel/carroussel";
-import RentalDropdown from "../components/rentalDropdown/rentalDropdown";
+import Dropdown from "../components/dropdown/dropdown";
+import Ratings from "../components/ratings/ratings";
 import Tag from "../components/tag/tag";
-import  logementJson  from "../data/logements.json"
+import logementJson  from "../data/logements.json"
 import "./logement.css"
 
 
@@ -12,53 +13,41 @@ function Logement () {
 
     let checkRental = logementJson.find(search => search.id === id.id)
 
-    let tags = checkRental.tags
+    let tags = checkRental.tags.map((tag) => (
+        <Tag key={`${tag}`} tag={`${tag}`} />
+    ))
 
-{/*
-
-    let dropdown = [
-                    {
-                        "name": "description",
-                        "content": checkRental.description
-                    },
-                    {
-                        "name": "équipement",
-                        "content": checkRental.equipments
-                    }
-                   ]
-    console.log(checkRental.equipments) */}
-
+    let rentalEquipment = checkRental.equipments.map(( equipment, index ) => (
+        <>
+            <li key={`${index}`} >{equipment}</li>
+        </>
+))
+    
     return(
     <>
         <Outlet />
         <Carroussel />
 
         <section className="rentalIdentity" >
-            <div className="Place" >
+            <div className="place" >
                 <p className="rentalTitle" >{checkRental.title}</p>
                 <p className="rentalPlace" >{checkRental.location}</p>
                 <div className="tagWrapper">
-
-                {tags.map((tag) => (
-                    <Tag key={`${tag}`} tag={`${tag}`} />
-                ))}
+                    {tags}
                 </div>
-
             </div>
-            <div className="host" >
-                <p className="renterName" >{checkRental.host.name}</p>
-                <img  className="renterPicture" src={checkRental.host.picture} alt="profil du loueur" />
-                {/* Ratings */}
+            <div className="renterNotation">
+                <div className="host" >
+                    <p className="renterName" >{checkRental.host.name}</p>
+                    <img  className="renterPicture" src={checkRental.host.picture} alt="profil du loueur" />
+                </div>
+                <Ratings rate={checkRental.rating}/>
             </div>
         </section>
 
         <aside>
-        
-            
-          <RentalDropdown name="description" content= {checkRental.description} />
-          <RentalDropdown name="équipement" content= {checkRental.equipments} />
-
-
+            <Dropdown name="description" content= {checkRental.description} />
+            <Dropdown name="équipement" content= {rentalEquipment} />
         </aside>
     </>
     )
