@@ -1,5 +1,5 @@
 import { useState } from "react"
-import arrow from "../../assets/vector.svg"
+import arrow from "../../assets/arrow.svg"
 import "./dropdown.css"
 
 

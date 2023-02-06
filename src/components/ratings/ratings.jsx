@@ -11,21 +11,20 @@ function Ratings ({ rate }) {
     
     let starArray = []
 
-    let redstar = <img className="rating" src = {redStar} alt = "Etoile de notation"/>
-    let greystar = <img className="rating" src = {greyStar} alt = "Etoile de notation"/>
-
     for (let i = 0; i < ratedStars ; i++) {
+        let redstar = <img className="rating" src = {redStar} alt = "Etoile de notation" key={i}/>
+
         starArray.push(redstar)
     }
     for (let i = 0; i < unratedStars ; i++) {
+        let greystar = <img className="rating" src = {greyStar} alt = "Etoile de notation" key={ratedStars+i}/>
+
         starArray.push(greystar)
     }
 
-    let finalRating = starArray.map((star) => {return star})
-
     return(
         <>
-            {finalRating}
+            {starArray}
         </>
     )
 }

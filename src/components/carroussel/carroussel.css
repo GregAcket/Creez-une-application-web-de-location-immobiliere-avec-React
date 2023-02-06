@@ -1,9 +1,40 @@
-.carroussel{
-    width: 1240px;
+.wrapper{
+    display: flex;
+    max-width: 1240px;
     height: 415px;
     border-radius: 25px;
-    background-color: #f4d509;
     margin-top: 20px;
     margin-bottom: 30px;
+    overflow: hidden;
+}
 
+.wrapper button{
+    position: absolute;
+}
+
+.image{
+    display: flex;
+    min-width: 1240px;
+    height: 415px;
+    border-radius: 25px;
+    object-fit: cover;
+    mix-blend-mode: normal;
+}
+
+.leftArrow{
+    position: relative;
+    left: 24px;
+    top: 157px;
+    width: 79px;
+    height: 47px;
+    transform: rotate(90deg);
+}
+
+.rightArrow{
+    position: relative;
+    left: 1116px;
+    top: 157px;
+    width: 79px;
+    height: 47px;
+    transform: rotate(-90deg);
 }

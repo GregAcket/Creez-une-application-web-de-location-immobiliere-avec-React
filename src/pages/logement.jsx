@@ -17,16 +17,21 @@ function Logement () {
         <Tag key={`${tag}`} tag={`${tag}`} />
     ))
 
-    let rentalEquipment = checkRental.equipments.map(( equipment, index ) => (
-        <>
+    let rentalEquipment = checkRental.equipments.map(( equipment, index ) => {
+        return (
             <li key={`${index}`} >{equipment}</li>
-        </>
-))
-    
+    )})
+
+    let pictures = checkRental.pictures.map((pics, index) => {
+
+        return (
+            <img className="image" src= {pics} alt="habitation" key={index} />
+    )})
+
     return(
     <>
         <Outlet />
-        <Carroussel />
+        <Carroussel image={pictures}/>
 
         <section className="rentalIdentity" >
             <div className="place" >
@@ -36,10 +41,10 @@ function Logement () {
                     {tags}
                 </div>
             </div>
-            <div className="renterNotation">
+            <div>
                 <div className="host" >
                     <p className="renterName" >{checkRental.host.name}</p>
-                    <img  className="renterPicture" src={checkRental.host.picture} alt="profil du loueur" />
+                    <img  className="renterPicture" src={checkRental.host.picture} alt="Profil du loueur" />
                 </div>
                 <Ratings rate={checkRental.rating}/>
             </div>
