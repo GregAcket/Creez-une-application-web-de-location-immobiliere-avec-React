@@ -1,40 +1,45 @@
-.wrapper{
-    display: flex;
+.carrousselWrapper{
     max-width: 1240px;
+    width: 100%;
     height: 415px;
     border-radius: 25px;
     margin-top: 20px;
     margin-bottom: 30px;
-    overflow: hidden;
-}
-
-.wrapper button{
-    position: absolute;
 }
 
 .image{
     display: flex;
-    min-width: 1240px;
+    max-width: 1240px;
+    width: 100%;
     height: 415px;
     border-radius: 25px;
     object-fit: cover;
     mix-blend-mode: normal;
 }
 
-.leftArrow{
-    position: relative;
-    left: 24px;
-    top: 157px;
+.arrow{
     width: 79px;
     height: 47px;
+}
+
+.left{
     transform: rotate(90deg);
 }
 
-.rightArrow{
-    position: relative;
-    left: 1116px;
-    top: 157px;
-    width: 79px;
-    height: 47px;
+.right{
     transform: rotate(-90deg);
+}
+
+.buttonWrapper{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1240px;
+    width: 100%;
+    padding: 24px;
+    top: 284px;
+}
+
+.buttonWrapper button{
+    padding: 0;
 }

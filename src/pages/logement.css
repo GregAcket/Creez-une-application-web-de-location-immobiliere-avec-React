@@ -2,7 +2,7 @@ aside{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 76px;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     width: 100%;
 }
 
@@ -41,7 +41,6 @@ aside{
 .renterPicture{
     border-radius: 50%;
     width: 64px;
-    height: 64px;
     margin-left: 10px;
 }
 

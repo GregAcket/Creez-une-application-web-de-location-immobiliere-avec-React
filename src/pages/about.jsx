@@ -11,10 +11,7 @@ function About() {
     <>
       <Outlet />
       
-        <div className="containerAboutBanner">
-            <img className='banner' src={bannerAbout} alt="Mountain Landscape"></img>
-        </div>
-          
+        <img className='banner' src={bannerAbout} alt="Mountain Landscape"></img>    
 
         {dropdownjson.map((objet, index) => (
           <Dropdown key={`${objet}-${index}`} name={objet.name} content={objet.text}></Dropdown>

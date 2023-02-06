@@ -13,18 +13,16 @@ function Carroussel({image}) {
     }
 
     return (
-<>
-
-    <div className="wrapper">
-    <button onClick={() => setn(n-1)} ><img className="leftArrow" src={arrow} alt="logo flèche gauche" ></img></button>
-    <button onClick={() => setn(n+1)}><img className="rightArrow" src={arrow} alt="logo flèche droite" ></img></button>
-        {image[n]}
-    </div>
-
-</>
-
+    <>
+        <div className="carrousselWrapper">
+            <div className="buttonWrapper">
+                <button onClick={() => setn(n-1)} ><img className="left arrow" src={arrow} alt="logo flèche gauche" ></img></button>
+                <button onClick={() => setn(n+1)}><img className="right arrow" src={arrow} alt="logo flèche droite" ></img></button>
+            </div>
+            {image[n]}
+        </div>
+    </>
     )
-    
 }
 
 export default Carroussel
