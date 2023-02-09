@@ -25,9 +25,10 @@
   }
 
 .gallery{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px 60px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 50px 20px;
   background: #f7f7f7;
   max-width: 1240px;
   width: 100%;
@@ -35,4 +36,32 @@
   margin-top: 43px;
   padding: 56px 50px 43px 50px;
   z-index: 0;
+}
+
+
+@media all and (max-width: 839px){
+  
+  .containerHomeBanner{
+    margin-top: 16px ;
+    border-radius: 10px;
+  }
+
+  .textHomeBanner{
+    margin-left: 36px;
+    margin-right: 36px;
+    font-size: 24px;
+  }
+
+  .homeBanner{
+    height: 111px;
+    border-radius: 10px;
+    }
+
+  .gallery{
+    gap: 20px;
+    background: white;
+    border-radius: 0;
+    margin-top: 22px;
+    padding: 0;
+  }
 }

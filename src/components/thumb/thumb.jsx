@@ -10,7 +10,7 @@ function Thumb() {
         <Link to={`/Logement/${rental.id}`}  key={rental.id} >
             <article className="homepageArticle">
                 <img className="rentalImg" src={rental.cover} alt={rental.title}></img>
-                <span className="rentalName"> {rental.title}</span>
+                <p className="rentalName"> {rental.title}</p>
             </article>
         </Link>
   ))}

@@ -12,16 +12,25 @@ function Carroussel({image}) {
         n = 0
     }
 
-    return (
+    return (image.length !== 1 ) ? (
     <>
-        <div className="carrousselWrapper">
+        <div className="carrousselWrapper">      
             <div className="buttonWrapper">
                 <button onClick={() => setn(n-1)} ><img className="left arrow" src={arrow} alt="logo flèche gauche" ></img></button>
                 <button onClick={() => setn(n+1)}><img className="right arrow" src={arrow} alt="logo flèche droite" ></img></button>
-            </div>
+                <p>{n+1}/{image.length}</p>  
+            </div>  
             {image[n]}
         </div>
     </>
+    ) : (
+    <>
+        <div className="carrousselWrapper">
+            {image[n]}
+        </div>
+    </>
+
+
     )
 }
 

@@ -10,24 +10,24 @@ function Dropdown (props) {
     return open ? (
         <>
             <article>
-                <div  className="topDropdown">
+                <button className="DropdownButton" onClick={() => setOpen(false)}>
                     <p>{props.name}</p>
-                    <button onClick={() => setOpen(false)}><img className="up" src={arrow} alt="logo flèche" ></img></button>
-                </div>
-
+                    <img className="up" src={arrow} alt="logo flèche" ></img>
+                </button>
                 {typeof props.content === "object" ? <ul className="text">{props.content}</ul> : <p className="text">{props.content}</p>}
-
             </article>
         </>
         ) : (
         <>
-            <article className="topDropdown">
+
+            <button className="DropdownButton" onClick={() => setOpen(true)}>
+                <article>
                     <p>{props.name}</p>
-                <button onClick={() => setOpen(true)}><img src={arrow} alt="Logo flèche"></img></button>
-            </article>
+                    <img src={arrow} alt="Logo flèche"></img>
+                </article>
+            </button>    
         </>
     )
 }
 
 export default Dropdown
-

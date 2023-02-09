@@ -13,8 +13,8 @@ function Logement () {
 
     let checkRental = logementJson.find(search => search.id === id.id)
 
-    let tags = checkRental.tags.map((tag) => (
-        <Tag key={`${tag}`} tag={`${tag}`} />
+    let tags = checkRental.tags.map((tag, index) => (
+        <Tag key={`${index}`} tag={`${tag}`} />
     ))
 
     let rentalEquipment = checkRental.equipments.map(( equipment, index ) => {
@@ -23,9 +23,8 @@ function Logement () {
     )})
 
     let pictures = checkRental.pictures.map((pics, index) => {
-
         return (
-            <img className="image" src= {pics} alt="habitation" key={index} />
+            <img key={index} className="image" src= {pics} alt="habitation"/>
     )})
 
     return(
@@ -41,18 +40,20 @@ function Logement () {
                     {tags}
                 </div>
             </div>
-            <div>
+            <div className="hostAndRate" >
                 <div className="host" >
                     <p className="renterName" >{checkRental.host.name}</p>
                     <img  className="renterPicture" src={checkRental.host.picture} alt="Profil du loueur" />
                 </div>
-                <Ratings rate={checkRental.rating}/>
+                <div>
+                    <Ratings rate={checkRental.rating}/>
+                </div>
             </div>
         </section>
 
         <aside>
-            <Dropdown name="description" content= {checkRental.description} />
-            <Dropdown name="équipement" content= {rentalEquipment} />
+            <Dropdown name="Description" content= {checkRental.description} />
+            <Dropdown name="Équipement" content= {rentalEquipment} />
         </aside>
     </>
     )

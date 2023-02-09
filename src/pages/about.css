@@ -6,4 +6,12 @@
     background-color: black;
     mix-blend-mode: darken;
     border-radius: 25px;
+    object-fit: cover;
+}
+
+
+@media all and (max-width : 549px) {
+    .banner{
+        margin-top: 17px;
+    }
 }

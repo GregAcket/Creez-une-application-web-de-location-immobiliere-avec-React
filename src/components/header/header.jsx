@@ -16,7 +16,7 @@ function Header() {
                     <NavLink
                         to= {`/`} 
                         className={({ isActive }) => isActive ? "accueilActive" : "accueil" } >Accueil
-                    </NavLink>
+                        </NavLink>
                 </li>
                 <li>
                     <NavLink

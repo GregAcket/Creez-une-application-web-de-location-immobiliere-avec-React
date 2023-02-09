@@ -14,7 +14,7 @@ function About() {
         <img className='banner' src={bannerAbout} alt="Mountain Landscape"></img>    
 
         {dropdownjson.map((objet, index) => (
-          <Dropdown key={`${objet}-${index}`} name={objet.name} content={objet.text}></Dropdown>
+          <Dropdown key={index} name={objet.name} content={objet.text}></Dropdown>
         ))}
     </>
   )
