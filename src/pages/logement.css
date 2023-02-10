@@ -30,6 +30,7 @@ aside{
 
 .tagWrapper{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .host{
@@ -47,6 +48,19 @@ aside{
     width: 70px;
     text-align: right;
 }
+
+.rates{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@media all and (max-width : 706px) {
+    .rentalTitle{
+        font-size: 27px;
+    }
+}
+
+
 
 @media all and (max-width : 549px) {
     aside{

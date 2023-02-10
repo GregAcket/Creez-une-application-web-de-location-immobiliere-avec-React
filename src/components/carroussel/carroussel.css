@@ -43,18 +43,26 @@
     position: absolute;
     display: flex;
     justify-content: space-between;
-    max-width: 1240px;
+    padding-left: 20px;
+    padding-right: 60px;
+    max-width: 1260px;
     width: 100%;
-    padding: 24px;
-    top: 284px;
+    top: 308px;
 }
 
 .buttonWrapper button{
+    display: flex;
     padding: 0;
     background-color: transparent;
     border: none;
 }
 
+@media all and (min-width : 1259px) {
+    .buttonWrapper{
+        padding-right: 40px;
+    }
+
+}
 
 @media all and (max-width : 549px) {
 
@@ -82,8 +90,8 @@
     }
     
     .buttonWrapper{
-        max-width: 335px;
-        padding: 6px;
+        max-width: 549px;
+        min-width: 335px;
         top: 212px;
     }
 }

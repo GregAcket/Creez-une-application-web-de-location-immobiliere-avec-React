@@ -45,7 +45,7 @@ function Logement () {
                     <p className="renterName" >{checkRental.host.name}</p>
                     <img  className="renterPicture" src={checkRental.host.picture} alt="Profil du loueur" />
                 </div>
-                <div>
+                <div className="rates">
                     <Ratings rate={checkRental.rating}/>
                 </div>
             </div>
