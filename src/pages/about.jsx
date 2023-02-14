@@ -1,4 +1,3 @@
-import { Outlet } from "react-router-dom";
 import bannerAbout from "../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png"
 import Dropdown from "../components/dropdown/dropdown";
 import dropdownjson from '../data/dropdown.json';
@@ -9,13 +8,11 @@ function About() {
 
   return (
     <>
-      <Outlet />
-      
-        <img className='banner' src={bannerAbout} alt="Mountain Landscape"></img>    
+      <img className='banner' src={bannerAbout} alt="Mountain Landscape"></img>    
 
-        {dropdownjson.map((objet, index) => (
-          <Dropdown key={index} name={objet.name} content={objet.text}></Dropdown>
-        ))}
+      {dropdownjson.map((objet, index) => (
+        <Dropdown key={index} name={objet.name} content={objet.text}></Dropdown>
+      ))}
     </>
   )
 }

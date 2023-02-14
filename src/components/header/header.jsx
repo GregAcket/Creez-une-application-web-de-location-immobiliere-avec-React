@@ -4,7 +4,8 @@ import "./header.css"
 
 
 function Header() {
-    return (
+
+return (
 <>
     <header>
         <Link to={`/`}>
@@ -15,13 +16,14 @@ function Header() {
                 <li>
                     <NavLink
                         to= {`/`} 
-                        className={({ isActive }) => isActive ? "accueilActive" : "accueil" } >Accueil
-                        </NavLink>
+                        className={({ isActive }) => isActive ? "accueilActive" : "accueil" }>Accueil
+                    </NavLink>
                 </li>
                 <li>
                     <NavLink
                         to= {`/About`}
                         className={({ isActive }) => isActive ? "aproposActive" : "apropos" } >A propos
+                        
                     </NavLink>
                 </li>
             </ul>

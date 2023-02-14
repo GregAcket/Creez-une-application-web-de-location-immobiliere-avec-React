@@ -4,12 +4,13 @@ import "./thumb.css"
 
 
 function Thumb() {
+
     return(
 <>
     {logementJson.map((rental) => (
-        <Link to={`/Logement/${rental.id}`}  key={rental.id} >
+        <Link to={`/Logement/${rental.id}`}  key={rental.id}>
             <article className="homepageArticle">
-                <img className="rentalImg" src={rental.cover} alt={rental.title}></img>
+                <img className="rentalImg" src={rental.cover} alt={rental.title} />
                 <p className="rentalName"> {rental.title}</p>
             </article>
         </Link>
