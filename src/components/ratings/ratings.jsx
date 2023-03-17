@@ -8,7 +8,7 @@ function Ratings ({ rate }) {
     const totalStars = 5
     const ratedStars = parseInt(rate)
     const unratedStars = totalStars - ratedStars
-    
+
     let starArray = []
 
     for (let i = 0; i < ratedStars ; i++) {

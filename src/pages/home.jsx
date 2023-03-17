@@ -3,7 +3,7 @@ import Thumb from "../components/thumb/thumb";
 import "./home.css"
 
 function Home() {
-   
+
   return (
     <>
       <div className="containerHomeBanner">
@@ -11,7 +11,7 @@ function Home() {
         <img className='homeBanner'  src={bannerhomepage} alt="Forest Landscape"></img>
       </div>
       <section className="gallery">
-        <Thumb />          
+        <Thumb />
       </section>
     </>
   )

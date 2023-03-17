@@ -22,7 +22,7 @@ function Logement () {
         return (
             <img key={index} className="image" src= {pics} alt="habitation"/>
     )})
-    
+
     let tags = checkedRental.tags.map((tag, index) => (
         <Tag key={`${index}`} tag={`${tag}`} />
     ))

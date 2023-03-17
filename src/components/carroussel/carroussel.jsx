@@ -14,12 +14,12 @@ function Carroussel({image}) {
 
     return (
     <>
-        <div className="carrousselWrapper">      
+        <div className="carrousselWrapper">
             {image[n]}
             {image.length !== 1 && 
             <div className="buttonWrapper">
-                <button onClick={() => setn(n-1)}><img className="left arrow" src={arrow} alt="logo flèche gauche" ></img></button>
-                <button onClick={() => setn(n+1)}><img className="right arrow" src={arrow} alt="logo flèche droite" ></img></button>
+                <button onClick={() => setn(n-1)}><img className="left arrow" src={arrow} alt="logo flèche gauche" /></button>
+                <button onClick={() => setn(n+1)}><img className="right arrow" src={arrow} alt="logo flèche droite" /></button>
                 <p>{n+1}/{image.length}</p>  
             </div> }
         </div>

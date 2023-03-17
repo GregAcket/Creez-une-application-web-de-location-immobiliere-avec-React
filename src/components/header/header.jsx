@@ -23,7 +23,6 @@ return (
                     <NavLink
                         to= {`/About`}
                         className={({ isActive }) => isActive ? "aproposActive" : "apropos" } >A propos
-                        
                     </NavLink>
                 </li>
             </ul>

@@ -25,7 +25,7 @@ function Dropdown (props) {
                     <p>{props.name}</p>
                     <img src={arrow} alt="Logo flèche"></img>
                 </article>
-            </button>    
+            </button>
         </>
     )
 }
